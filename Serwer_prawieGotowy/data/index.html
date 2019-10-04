@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Esp -12S</title>
+	<meta name="description" content="Serwer danych. Praca inżynierska Tomasz Paciorkowski" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+	</script>
+	
+	<style>
+	body
+{
+	background-color: #404040;
+	font-family: 'Lato', sans-serif;
+}
+
+#container
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo
+{
+	color: white;
+	margin-top: 15px;
+	text-align: center;
+	font-size: 44px;
+	letter-spacing: 3px;
+	font-weight: 900;
+}
+
+#menu
+{
+	background-color: #303030;
+	margin-top: 20px;
+	color: #ffffff;
+	padding: 10px;
+	padding-left: 230px;
+	text-align: center;
+	
+}
+
+#topbar
+{
+	background-color: #128870;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	height: 170px;
+}
+
+#topbarL
+{
+	float:left;
+	padding: 20px;
+	width: 138px;
+	text-align: center;
+	border-right: 2px dotted #cccccc;
+}
+.icona
+{
+	width: 138px;
+	/*height: 170px;*/
+}
+
+#topbarR
+{
+	float: left;
+	padding: 20px;
+	width: 760px;
+	font-size: 16px;
+	text-align: justify;
+}
+
+
+
+#content
+{
+	float: left;
+	padding: 40px;
+	width: 920px;
+	background-color: #dedede;
+	min-height: 580px;
+	text-align: center;
+}
+.backBoard
+{
+	background-color:#128870;
+	color:#ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	width:600px;
+	height: 200px;
+	padding: 20px;
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(136,136,136,0.75);
+	-moz-box-shadow: 0px 0px 30px 5px rgba(136,136,136,0.75);
+	box-shadow: 0px 0px 30px 5px rgba(136,136,136,0.75);
+}
+
+.napis
+{
+	font-size: 44px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.temp
+{
+	font-size: 30px;
+}
+
+.wil 
+{
+	font-size: 30px;
+}
+
+.cis
+{
+	font-size: 30px;
+}
+
+
+#footer
+{
+	clear: both;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.option
+{
+	float: left;
+	min-width: 50px;
+	height: 25px;
+	font-size: 18px;
+	padding: 10px;
+	border-right: 2px dotted #444444;
+	opacity: 0.8;
+}
+.option:first-child
+{
+	border-left: 2px dotted #444444;
+}
+
+.option:hover
+{
+	background-color: #000000;
+	cursor: pointer;
+}
+
+.bigtitle
+{
+	font-size: 32px;
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+
+.dottedline
+{
+	height: 5px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	margin-bottom: 40px;
+	border-bottom: 2px dotted #444444;
+}
+a:link
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+	
+	
+	
+	</style>
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	
+	<div id="container">
+	
+		<div id="logo">
+			Serwer Esp8266
+		</div>
+		
+		<div id="menu">
+			<div class="option"> <a href="index.html">Strona głowna</a> 
+			</div>
+			<div class="option"> <a href="wykresy.html">Wykresy</a> 
+			</div>
+			<div class="option"> <a href="download.html">Download</a>  </div>
+			<div class="option">Ustawienia</div>
+			<div class="option">O projekcie</div>
+			<div style="clear:both;"></div>
+		</div>
+		
+		<div id="topbar">
+			<div id="topbarL">
+				<img src="http://www.bluecomtech.com/wordpress/wp-content/uploads/2018/02/arduino-icon-28-1.png" class="icona"/>
+			</div>
+			<div id="topbarR">
+				<span class="bigtitle">O projekcie słów kilka</span>
+				<div style="height: 15px;"></div>
+				Kiedy mówisz: "Napisałem program, który wywalił Windows, ludzie gapią się na Ciebie głupkowato i mówią: Hej, ja dostałem to wraz z systemem, za darmo" - Linus Torvalds, twórca Linuxa :) Zapraszamy do zapoznania się z witryną!
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		
+		<div id="content">
+			<span class="bigtitle"> Wskazania czujników. </span>
+			
+			<div class="dottedline"></div>
+			<div class="backBoard">
+				<span class="napis"> Temperatura </span>
+				<br><br>
+				<span class="temp"> ___</span>
+				*C
+				<br><br>
+				<span class="czasPobrania"> Data i czas pobrania: </span>
+				<br><br>
+				<span class="tempCzas"> 2019/06/18 14:22 </span>			
+			</div>
+			<div class="backBoard">
+				<span class="napis"> Wilgotność </span>
+				<br><br>
+				<span class="wil"> ___ </span>
+				%
+				<br><br>
+				<span class="czasPobrania"> Data i czas pobrania: </span>
+				<br><br>
+				<span class="wilCzas"> 2019/06/18 14:21 </span>	
+			</div>
+			<div class="backBoard">
+				<span class="napis"> Ciśnienie </span>
+				<br><br>
+				<span class="cis"> ___ </span>
+				hPa
+				<br><br>
+				<span class="czasPobrania"> Data i czas pobrania: </span>
+				<br><br>
+				<span class="cisCzas"> 2019/06/18 13:57 </span>	
+			</div>
+		</div>	
+		
+		<div id="footer">
+			Esp8266 - projekt Tomasz Paciorkowski. Strona w sieci od 2019r. &copy; Wszelkie prawa zastrzeżone
+		</div>
+	
+	</div>
+	
+	
+	<script type="text/javascript">
+ 
+	var ajaxRequest = null;
+	if (window.XMLHttpRequest)  { ajaxRequest =new XMLHttpRequest(); }
+	else                        { ajaxRequest =new ActiveXObject("Microsoft.XMLHTTP"); }
+	$('.temp').html("0");
+	$('.wil').html("0");
+	$('.cis').html("0");
+	var zmien = 0;
+ 
+ function pobierz() {
+ 
+	if(zmien == 0){ajaxLoad('/Itemp'); zmien= 1;}
+	else if (zmien ==1){ajaxLoad('/Iwil'); zmien= 2;}
+	else if (zmien ==2){ajaxLoad('/Icis');zmien= 0;}
+	  
+	  setTimeout("pobierz()",10000);
+  }
+function ajaxLoad(ajaxURL)
+{
+  if(!ajaxRequest){ alert("AJAX is not supported."); return; }
+ 
+  ajaxRequest.open("GET",ajaxURL,true);
+  ajaxRequest.send();
+  ajaxRequest.onreadystatechange = function()
+  {
+    if(ajaxRequest.readyState == 4 && ajaxRequest.status==200)
+    {
+      var ajaxResult = ajaxRequest.responseText;
+	  //alert(ajaxResult);
+	  var positionEnd = ajaxResult.lastIndexOf("Massage for synchronization!");
+	  //alert(positionEnd);
+	  if (ajaxURL==='/Itemp')  
+	  {
+		  var text = ajaxResult.substr(positionEnd+29,6);
+		  //alert("temperatura_");
+		  $('.temp').html(text);
+	  }
+	  else if (ajaxURL==='/Iwil') 
+	  {
+		  var text2 = ajaxResult.substr(positionEnd+29,6);
+		  //alert("wilgotnosc_");
+		  $('.wil').html(text2);
+	  }
+	  else if (ajaxURL==='/Icis')  
+	  {
+		  var text3 = ajaxResult.substr(29,33);
+		  //alert("cisnienie_");
+		  $('.cis').html(text3);
+	  }
+	  else alert("nic nie pasuje :/");
+    }
+  }
+}
+ $(window).on('load', function() {
+  pobierz();
+ });
+ 
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Esp -12S</title>
+	<meta name="description" content="Serwer danych. Praca inżynierska Tomasz Paciorkowski" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+	</script>
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<style>
+body
+{
+	background-color: #404040;
+	font-family: 'Lato', sans-serif;
+}
+
+#container
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo
+{
+	color: white;
+	margin-top: 15px;
+	text-align: center;
+	font-size: 44px;
+	letter-spacing: 3px;
+	font-weight: 900;
+}
+
+#menu
+{
+	background-color: #303030;
+	margin-top: 20px;
+	color: #ffffff;
+	padding: 10px;
+	padding-left: 230px;
+	text-align: center;
+	
+}
+
+#topbar
+{
+	background-color: #128870;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	height: 170px;
+}
+
+#topbarL
+{
+	float:left;
+	padding: 20px;
+	width: 138px;
+	text-align: center;
+	border-right: 2px dotted #cccccc;
+}
+.icona
+{
+	width: 138px;
+	/*height: 170px;*/
+}
+
+#topbarR
+{
+	float: left;
+	padding: 20px;
+	width: 760px;
+	font-size: 16px;
+	text-align: justify;
+}
+
+#content
+{
+	float: left;
+	padding: 40px;
+	width: 920px;
+	background-color: #dedede;
+	min-height: 580px;
+	text-align: center;
+}
+.backBoard
+{
+	background-color:#128870;
+	color:#ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	width:600px;
+	height: 200px;
+	padding: 20px;
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(136,136,136,0.75);
+	-moz-box-shadow: 0px 0px 30px 5px rgba(136,136,136,0.75);
+	box-shadow: 0px 0px 30px 5px rgba(136,136,136,0.75);
+}
+
+.napis
+{
+	font-size: 44px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.temp
+{
+	font-size: 30px;
+}
+
+#footer
+{
+	clear: both;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.option
+{
+	float: left;
+	min-width: 50px;
+	height: 25px;
+	font-size: 18px;
+	padding: 10px;
+	border-right: 2px dotted #444444;
+	opacity: 0.8;
+}
+.option:first-child
+{
+	border-left: 2px dotted #444444;
+}
+
+.option:hover
+{
+	background-color: #000000;
+	cursor: pointer;
+}
+
+.bigtitle
+{
+	font-size: 32px;
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+
+.dottedline
+{
+	height: 5px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	margin-bottom: 40px;
+	border-bottom: 2px dotted #444444;
+}
+a:link
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#tekst
+{
+	width:800px;
+	max-height: 300px;
+	height:300px;
+	max-width: 800px;
+	font-size:15px;
+	background-color:#eeeeee;
+	color:#333333;
+	padding: 10px 10px;
+	margin: 20px;
+	border-radius: 5px;
+}
+#stopka
+{
+	margin: 10px;
+}
+	</style>
+
+</head>
+
+<body>
+	
+	<div id="container">
+	
+		<div id="logo">
+			Serwer Esp8266
+		</div>
+		
+		<div id="menu">
+			<div class="option"> <a href="index.html">Strona głowna</a> 
+			</div>
+			<div class="option"> <a href="wykresy.html">Wykresy</a> 
+			</div>
+			<div class="option"> <a href="download.html">Download</a>  </div>
+			<div class="option">Ustawienia</div>
+			<div class="option">O projekcie</div>
+			<div style="clear:both;"></div>
+		</div>
+		
+		<div id="topbar">
+			<div id="topbarL">
+				<img src="http://www.bluecomtech.com/wordpress/wp-content/uploads/2018/02/arduino-icon-28-1.png" class="icona"/>
+			</div>
+			<div id="topbarR">
+				<span class="bigtitle">O projekcie słów kilka</span>
+				<div style="height: 15px;"></div>
+				Kiedy mówisz: "Napisałem program, który wywalił Windows, ludzie gapią się na Ciebie głupkowato i mówią: Hej, ja dostałem to wraz z systemem, za darmo" - Linus Torvalds, twórca Linuxa :) Zapraszamy do zapoznania się z witryną!
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		
+		<div id="content">
+			<span class="bigtitle"> Pobierz pomiary z serwera </span>
+			
+			<div class="dottedline"></div>
+			
+			<div id="stopka" >Wybierz czujnik i kliknij Pobierz. </div>
+			
+			<select id="lista">
+			  <option value="Temperatura">Temperatura</option>
+			  <option value="Wilgotnosc">Wilgotność</option>
+			  <option value="Cisnienie">Ciśnienie</option>
+			</select>
+			
+			<input type="submit" id="wybierz" value="Pobierz" onclick="zaladuj()"/>
+			<div style="clear:both;"></div>
+			 <textarea id="tekst" name="note">Dane z serwera zostaną pobrane i wklejone do pola tekstowego. </textarea>
+			<div id="stopka" > Skopiuj i zapisz w pliku tekstowym </div>
+
+		</div>	
+		
+		<div id="footer">
+			Esp8266 - projekt Tomasz Paciorkowski. Strona w sieci od 2019r. &copy; Wszelkie prawa zastrzeżone
+		</div>
+	
+	</div>
+	
+	<script>
+	var tempp = "temperatura";
+	var will = "wilgotność";
+	var ciss = "ciśnienie";
+	
+	function zaladuj()
+	{
+		var x = document.getElementById("lista").selectedIndex;
+		
+		if(x==0) {$('#tekst').val(tempp);}
+		else if (x==1) {$('#tekst').val(will);}
+		else {$('#tekst').val(ciss);}
+		//alert(x);
+		
+	}
+	
+	</script>
+	
+	
+</body>
+</html>
